@@ -4,10 +4,22 @@
 main colours:
 
 primary colour:rgb(183,154,246)//purple
-secondary colour:(153,38,89)//darker purple
-Third colour:(200,277,250)lighter purple
+secondary colour:rgb(53,38,89)//darker purple
+Third colour:rgb(200,277,250)//lighter purple
 
 */
+/*--------------mobile styles---------*/
+/*apply a natural box modle layout to all elements*/
+* {
+    box-sizing: border-box;
+}
+
+/*all images will be 100% of parent*/
+img, video{
+    width:100%;
+    
+    
+}
 
 body{
     font-family: serif, sans-serif;
@@ -20,24 +32,124 @@ body{
 }
 
 #homeBgImage {
-    
+    position: relative;
     background-image: url(../img/trainerHomePage.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     width:100%;
-    height: auto;
+    height:100vh;
         
 }
 
-.logo img{
-    width: 18px;
+#logo{
+    position: fixed;
+    width: 45px;
+    top: 5px;
+    left:15px;
+    z-index: 110;
     
 }
 
+#cartIcon{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top:7px;
+    z-index: 110;
+   
+}
+/* navigation section*/
+#navC{
+    color:rgb(255,255,255);
+    width:100%;
+    height:auto;
+    background-color: rgb(53,38,89);
+    position: fixed;
+    z-index: 100px;
+    border-bottom:2px solid rgb(183,154,246);
+    
+    
+}
+/*this is for our cart */
 
+.fa-shopping-basket{
+    font-size: 2.5em;
+     color:rgb(200,277,250);
+}
+/* this is styling for 3 line symbol*/
+.navBtn{
+    font-size: 2.5em;
+    display: block;
+    margin:0 0 0 90vw;
+}
+/* nav list and a bloack within*/
+nav li a , nav li{
+    
+    width:100%;
+    height:auto;
+    display:block;
+    outline-style: none;
+    text-decoration: none;
+    list-style-type: none;
+}
 
+.menuItems a{
+    padding: 15px 5px 15px 0;
+    color:rgb(255,255,255);
+    text-align: right;
+    
+}
 
+.menuItems{
+    display:none;
+}
+
+/*navigation ends*/
+
+/*main page text and buttons*/
+
+.sloganC{
+    position:absolute;
+    color: rgb(255,255,255);
+    top: 20vh;
+    left: 56vw;
+    font-size: 2em;
+    
+    
+}
+.headingC, .buttonC{
+    width: 100%;
+    position: absolute;
+    
+}
+.buttonC{
+    top:90vh;
+}
+
+/*heading design*/
+.headingC{
+    font-family: "Lovers Quarrel", cursive ,sans-serif;
+/*    display:block;*/
+    text-align: center;
+    color:rgb(255,255,255);
+/*    margin: 65vh auto 10px auto;*/
+    top:80vh;
+    font-size: 2em;
+    letter-spacing: 2px;
+
+}
+/*new arrivals button*/
+.newArrivalsButton{
+    color: rgb(255,255,255);
+    padding:10px 15px;
+    border-radius: 5px 5px;
+    background-color: rgba(200,177,250, 0.2);
+    border:1px solid rgba(200,177,250);
+    cursor: pointer;
+    display:block;
+    margin: 0 auto;
+}
 
 
