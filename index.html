@@ -14,7 +14,11 @@
         <!-- specifies the content as HTML -->
     <meta name="viewport" content="width= device-width, initial-scale-1" />
     <!-- stops browser from lying about screen size-->
-    <link rel="stylesheet" type="text/css" href ="resources/css/main.css" />    
+    <link rel="stylesheet" type="text/css" href ="resources/css/main.css" />  
+    <link rel="stylesheet" type="text/css" href ="vendors/normalise.css" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+<!-- font awesome CDN        -->
     </head>
     
     <body>
@@ -27,8 +31,14 @@
             <a href ="#home"><img src="resources/img/logo.png"
             alt="the companies logo"/></a>
             </div>
+            <div id="cartIcon"> 
+            <a href="blank"><i class="fas fa-shopping-basket"></i></a>
+            </div>
+        <div id="navC">
+            <span class="navBtn"> &#8801;</span>
+
             <nav>
-                <ul>
+                <ul class="menuItems">
                  <li><a href=#home>Home</a></li>
                  <li><a href=#products>Products</a></li>
                  <li><a href=#sales>Sales</a></li>
@@ -40,12 +50,14 @@
                 
             </nav>
             <!-- navigation ends -->
+            </div> 
         </header>
-            <div> Exclusive<br> Trainers </div>
-            <div> Limited edition </div>
+            <div class="sloganC"> Exclusive<br> Trainers </div>
+            <div class="headingC"> Limited Edition </div>
             
-            <button>New Arrivals</button>
-            
+            <div class="buttonC">       
+            <button class="newArrivalsButton">New Arrivals</button>
+             </div>
             
         </section>
     <!-- home section end -->
@@ -199,18 +211,31 @@
             </figure>
             <button><a href="#">Add To Cart </a></button>
            </article>
+            
+            <form action="#">SHOPPING CART - Drag and Drop the trainers image here... </form>
+            <p>PREMIER DELIVERY - UNLIMTED NEXT DAY DELIVERY AND CLICK & COLLECT FOR £9.95 A YEAR.  </p>
+            <form action="">
+            <p> username: 
+                <input type="text" name="username" size="15" maxlength="30" /> Password: <input type="password" name="password" size="15" maxlength="30" />
+                </p>
+                </form>
+            
+            <button><a href="#">login</a></button> <button><a href="#">Register</a></button>
+        
+
+            
         </section>
         <!--sales section ends-->
         
-        <!-- shopping cart start-->
-        <!-- shopping cart end-->
+       
         
         <!-- about start -->
         <section>
         <h1> ABOUT</h1>
         <h2> a brief description of our company and all the services we offer</h2>
         
-           
+         
+<!--
         <iframe width="560" height="315" src="resources/video/trainers.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <p>
                 At lumière we provide superior customer service, with a commitment to deliver distinctive 
@@ -222,10 +247,11 @@ We are proud of our exlusive range of trainers with limited edition lines to com
 all the top brands in the world.
 
             </p>
+-->
         
         </section>
         <!-- about end-->
         
-    
+
     </body>
 </html>
