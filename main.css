@@ -20,9 +20,24 @@ img, video{
     
     
 }
+/*------embedded points-------*/
+@font-face{
+    font-family:'28_days';
+    src:url(../../vendors/fonts/28_days_later.tff);
+    src:url(../../vendors/fonts/28_days_later-webfont.woff),
+        url(../../vendors/fonts/28_days_later-webfont.woff2),
+        url(../../vendors/fonts/28_days_later-webfont.eot);
+    
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family:'fontAwesome';
+    src:url(../../vendors/fonts/fa-solid-900.tff);
+}
 
 body{
-    font-family: serif, sans-serif;
+    font-family: 'mukta', sans-serif;
     font-size:20px;
     color:rgb(20,20,20);
     margin: 0;
@@ -40,34 +55,38 @@ body{
 
     width:100%;
     height:100vh;
+    background-attachment: fixed;
         
 }
 
+
 #logo{
-    position: fixed;
-    width: 45px;
+    position: absolute;
+    width: 38px;
     top: 5px;
-    left:15px;
-    z-index: 110;
+    left: 10px;
+    z-index: 115;
+    position: fixed;
     
 }
 
 #cartIcon{
-    position: fixed;
+    position: absolute;
     width: 100%;
     text-align: center;
     top:7px;
     z-index: 110;
+    position: fixed;
    
 }
 /* navigation section*/
 #navC{
     color:rgb(255,255,255);
-    width:100%;
+    width:  100%;
     height:auto;
     background-color: rgb(53,38,89);
     position: fixed;
-    z-index: 100px;
+    z-index: 100;
     border-bottom:2px solid rgb(183,154,246);
     
     
@@ -111,10 +130,11 @@ nav li a , nav li{
 /*main page text and buttons*/
 
 .sloganC{
+    font-family:'28_days';
     position:absolute;
     color: rgb(255,255,255);
     top: 20vh;
-    left: 56vw;
+    left: 50vw;
     font-size: 2em;
     
     
@@ -130,7 +150,7 @@ nav li a , nav li{
 
 /*heading design*/
 .headingC{
-    font-family: "Lovers Quarrel", cursive ,sans-serif;
+    font-family:'Lovers Quarrel', cursive ,sans-serif;
 /*    display:block;*/
     text-align: center;
     color:rgb(255,255,255);
@@ -152,4 +172,344 @@ nav li a , nav li{
     margin: 0 auto;
 }
 
+/*-------styling for our products--------------*/
 
+h1{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+    
+}
+
+h2{
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.productC{
+    text-align: center;
+}
+
+.addToCart{
+    color:rgb(255,255,255);
+    border-radius: 5px 5px;
+    padding:10px 25px;
+    background-color:rgb(53,38,89);
+    cursor: pointer; 
+    
+}
+/*
+color:rgb(255,255,255);
+    width:  100%;
+    height:auto;
+    background-color: rgb(53,38,89);
+    position: fixed;
+    z-index: 100;
+    border-bottom:2px solid rgb(183,154,246);
+*/
+
+.addToCart a{
+    color:rgb(255,255,255);
+    text-decoration: none;
+    
+    
+}
+/*----pseudo selecter insert content after html element*/
+.addToCart a:after{
+/*----- enter unicode into our site----  */
+   
+    font-family:'Font Awesome 5 Free';
+    font-weight: 900;
+    content:"\f07a";
+}
+
+.signUp{
+    color:rgb(255,255,255);
+    border-radius: 5px 5px;
+    padding: 10px 25px;
+    background-color: rgb(53,38,89);
+    cursor: pointer;
+}
+
+
+.signUp a{
+    color:rgb(255,255,255);
+    text-decoration: none;
+}
+
+/*#Delivery{*/
+    
+/*}*/
+
+.contactsP,.contactsE {
+    color:rgb(255,255,255);
+    border-radius: 5px 5px;
+    padding: 10px 25px;
+    background-color: rgb(53,38,89);
+    cursor: pointer;
+}
+.contactsP a,.contactsE a{
+    color:rgb(255,255,255);
+    text-decoration: none;
+}
+.contactsP a:before{
+    font-family:'Font Awesome 5 Free';
+    font-weight: 900;
+    content:"\f095";
+    color:rgb(183,154,246);
+}
+.contactsE a:before{
+    font-family:'Font Awesome 5 Free';
+    font-weight: 900;
+    content:"\f0e0";
+    color:rgb(183,154,246);
+}
+
+#contacts{
+    text-align: center;
+    font-style: italic;
+   
+}
+
+figcaption {
+    min-height: 70px;
+}
+
+
+figcaption span{
+    display: block;
+    font-weight: bold; 
+    
+}
+/*--- our products container act as a parent to all elements within */
+.Trainers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    height:auto;
+}
+.productC{
+/*    flex-grow: 1;*/
+    text-align: center;
+    width:300px;
+      
+}
+/*---video------*/
+/*
+.trainerV{
+    margin: 0 10vw;
+}
+*/
+/*------delivery------*/
+#delivery{
+    border: solid 1px color rgb(183,154,246);
+}
+
+
+/*
+.sales!{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    height:auto;
+}
+*/
+  
+
+/*------media query------*/
+
+/*adjusts for screens bigger than 568px*/
+@media screen and (min-width:568px){
+/*-----only inclue what you are changing------ */
+    .sloganC{
+         left:50vw;   
+    }
+    
+}
+/*------tablets*/
+@media screen and (min-width:768px){
+
+    .sloganC{
+        top: 25vh;
+        left: 70vw;
+    }
+
+    .buttonC{
+        width:auto;
+        left:70vw;
+       top:40vh;
+    }
+
+    .headingC{
+        width:auto;
+        left:70vw;
+        top: 35vh;    
+    }
+
+    #homeBgImage{
+        height:57vh;
+        
+        
+    }
+    }
+/*
+    #cartIcon{
+        right:160px;
+   
+    }
+*/
+
+
+/*  desktop version */
+
+
+@media screen and (min-width:1024px){
+    
+    #homeBgImage{
+        height:100vh;
+        
+        
+    }
+    
+    .menuItems{
+        display:inline;
+    }
+    
+    #logo{
+        position: absolute;
+        width: 12%;
+
+        top: 45px;
+        left: 15px;
+        z-index: 90;
+
+/*
+    position: fixed;
+    
+*/
+    }
+     .sloganC{
+        top: 40vh;
+        left: 70vw;
+    }
+
+    .buttonC{
+        width:auto;
+        left:10vw;
+       top:85vh;
+    }
+
+    .headingC{
+        width:auto;
+        left:10vw;
+        top: 75vh;    
+    }
+    nav a {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    nav li a , nav li{
+    
+        width:100%;
+        height:auto;
+        display:block;
+        outline-style: none;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    
+    .navBtn, #cartIcon{
+        display: none;
+   
+    }
+    #navC{
+        color:rgb(255,255,255);
+        width:  100%;
+        height:auto;
+/*    background-color: rgb(53,38,89);*/
+/*    position: fixed;*/
+/*    z-index: 100;*/
+        border:none;
+        text-align:right;
+    
+    
+    }
+    .menuItems a{
+        padding: 15px 5vw 15px 0;
+        color:rgb(255,255,255);
+        text-align: center;
+        display: inline;
+    
+    }
+    
+    .menuItems li{
+        display: inline;
+        border: none;
+    }
+}
+
+@media screen and (min-width:1280px){
+    #homeBgImage{
+        background:none;
+/*
+        display: none;
+        position:absolute;
+        background-color: cover;
+        top: 0;
+        right: 0;
+        width:100%;
+        height: auto;
+*/
+    }
+    .myVideo{
+        display: inline-block;
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        right: 0;
+        width:100%;
+        height: auto;
+        background-attachment: fixed;
+/*        z-index: -100;*/
+    }
+    .videoSetup{
+        background:-webkit-linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+        background:-moz-linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+        overflow-y:hidden;
+        z-index: 120;
+        
+}
+   .videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    //padding: 20px;
+    border-radius: 5px;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+.videoContainer video {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.videoContainer .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: black;
+    opacity: 0.5;
+} 
+
+}
+
+  
